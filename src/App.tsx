@@ -1,33 +1,37 @@
 import { useState } from 'react';
-import dragonFruitLogo from './assets/dragon-fruits.svg';
-import viteLogo from '/vite.svg';
+import dragonFruitLogo from './assets/dragonFruits.svg';
+import ciara from './assets/ciaraCarwash.svg';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [sharkCount, setSharkCount] = useState(0);
+  const [birdCount, setBirdCount] = useState(0);
 
   return (
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={ciara} className="logo" alt="profile" />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={dragonFruitLogo} className="logo react" alt="React logo" />
+          <img
+            src={dragonFruitLogo}
+            className="logo react"
+            alt="Dragonfruit logo"
+          />
         </a>
       </div>
       <h1>Welcome to Dragonfruit Designs</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setSharkCount((sharkCount) => sharkCount + 1)}>
+          Click if you like baby hammerhead sharks: {sharkCount}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="card">
+        <button onClick={() => setBirdCount((birdCount) => birdCount + 1)}>
+          Click if you like potoo birds: {birdCount}
+        </button>
+      </div>
     </div>
   );
 }
